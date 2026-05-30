@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background-color: #0b1327;
+  color: #dbe1fe;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Explicit high-contrast dropdown styles to fix browser defaults and GTK theme overrides */
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-color: #1e293b !important;
+  color: #dbe1fe !important;
+  border: 1px solid #3d4947 !important;
+}
+
+[dir="rtl"] select, select[dir="rtl"] {
+  padding-left: 2rem !important;
+  padding-right: 0.75rem !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236bd8cb'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: left 0.5rem center !important;
+  background-size: 1.25em !important;
+}
+
+[dir="ltr"] select, select:not([dir="rtl"]) {
+  padding-right: 2rem !important;
+  padding-left: 0.75rem !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236bd8cb'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.5rem center !important;
+  background-size: 1.25em !important;
+}
+
+select:focus {
+  border-color: #6bd8cb !important;
+  box-shadow: 0 0 0 1px #6bd8cb !important;
+}
+
+option {
+  background-color: #131b2f !important;
+  color: #dbe1fe !important;
+}
+
+/* Material Symbols Outlined */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Glass Panels */
+.glass-panel {
+  backdrop-filter: blur(12px);
+  background-color: rgba(19, 27, 47, 0.8);
+}
+
+/* RTL Editor and scrollbars */
+.rtl-editor {
+  direction: rtl;
+  unicode-bidi: plaintext;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.editor-pane::-webkit-scrollbar {
+  width: 4px;
+}
+
+.editor-pane::-webkit-scrollbar-thumb {
+  background: #3d4947;
+}
+
+.custom-active-border {
+  border-right: 2px solid #6bd8cb;
+}
+
+/* Indeterminate Progress Bar Animation */
+@keyframes progress-indeterminate {
+  0% {
+    left: -40%;
+    width: 40%;
+  }
+  50% {
+    left: 30%;
+    width: 50%;
+  }
+  100% {
+    left: 100%;
+    width: 40%;
+  }
+}
+
+.animate-progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, #6bd8cb, transparent);
+  animation: progress-indeterminate 1.5s infinite linear;
+}
+
+/* Resizing handles */
+.resize-handle-v {
+  position: relative;
+  width: 4px;
+  cursor: col-resize;
+  background-color: rgba(61, 73, 71, 0.3);
+  transition: background-color 0.2s ease;
+  z-index: 10;
+}
+
+.resize-handle-v:hover,
+.resize-handle-v.active {
+  background-color: #6bd8cb;
+  width: 4px;
+}

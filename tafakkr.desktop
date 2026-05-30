@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Taffakr
+GenericName=Quranic Tafsir & Tadabbur
+GenericName[ar]=تفكّر - تفسير وتدبر القرآن الكريم
+Comment=An Obsidian-style Quranic Tafsir & Tadabbur Desktop Application
+Comment[ar]=تطبيق مكتبي لتفسير وتدبر القرآن الكريم بأسلوب أوبسيديان
+Exec=/home/anondev/code/tafakkr/build/bin/tafakkr
+Icon=/home/anondev/code/tafakkr/build/appicon.png
+Path=/home/anondev/code/tafakkr
+Terminal=false
+Categories=Office;Education;Utility;
+Keywords=Quran;Tafsir;Tadabbur;Obsidian;
+StartupNotify=true
